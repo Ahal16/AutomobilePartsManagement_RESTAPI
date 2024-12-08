@@ -3,8 +3,6 @@ using AutomobilePartsManagement.Repository;
 using AutomobilePartsManagement.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace AutomobilePartsManagement.Controllers
 {
     [Route("api/[controller]")]
@@ -63,7 +61,6 @@ namespace AutomobilePartsManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                //insert a new record and return as an object named employee
                 var newParts = await _repository.PostTblAutoPartReturnRecord(autoPart);
                 if (newParts != null)
                 {
