@@ -24,7 +24,7 @@ namespace AutomobilePartsManagement.Repository
                     return await _context.AutoParts.Include(part => part.Category).Include(part => part.Company)
                         .ToListAsync();
                 }
-                //Returns an empty list if context is null
+                
                 return new List<AutoPart>();
             }
             catch (Exception ex)
@@ -219,7 +219,6 @@ namespace AutomobilePartsManagement.Repository
                     };
                 }
 
-                //Find the employee by id
                 var existingAutoPart = _context.AutoParts.Find(id);
 
                 if (existingAutoPart == null)
@@ -233,7 +232,7 @@ namespace AutomobilePartsManagement.Repository
                         StatusCode = StatusCodes.Status400BadRequest
                     };
                 }
-                //Remove the employee record from the DBContext
+                
                 _context.AutoParts.Remove(existingAutoPart);
 
                 //save changes to the database
