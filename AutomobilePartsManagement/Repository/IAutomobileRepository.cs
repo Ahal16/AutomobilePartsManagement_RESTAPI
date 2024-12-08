@@ -7,7 +7,7 @@ namespace AutomobilePartsManagement.Repository
     public interface IAutomobileRepository
     {
         #region   1  - Get all autoparts from DB - Search All
-        //Get all employees from DB - Search All
+       
         public Task<ActionResult<IEnumerable<AutoPart>>> GetAllAutoParts();
         #endregion
 
